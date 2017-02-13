@@ -54,16 +54,18 @@ class TestSubject < MiniTest::Test
    end
 
    def test_merge_topics
-     
-       merged = @subject.mergeTopics 'topic 1', 'topic 2', 'mergedtopics'
-       assert_nil merged
-       @subject.findTopic 'topic 1'
-       @subject.findTopic 'topic 2'
-       merged = Topic.new 13, 'mergedtopics'
-       @subject.removeTopic 'topic 1'
-       @subject.removeTopic 'topic 2'
-       @subject.addTopic merged
-       assert merged
+     # To be completed
+       #Notice in academic.rb a new method, mergeTopics, has been added. This method merges two existing topics in the subject into one new topic. #The first two parameters of the method are the names of the existing topics to be merged, the third parameter is the name for the #meeged/new topic. The noLectures for the new topic is a simple summation of the values for the two existing topics. The two existing topics #are removed from the topic list and the new one added. The method returns a reference to the new topic.
+       #You must implement a test case for the mergeTopics target method.
+       #git omega
+       merged = @subject.mergeTopics 'topic 1', 'topic 2'
+       assert_equal true, merged
+       
+       @subject.removeTopic 'topic 1'.name
+       @subject.removeTopic 'topic 2'.name
+       
+              @subject.addTopic 'topic 2'.name
+              @subject.addTopic 'topic 2'.name
 
    end
 
